@@ -1,10 +1,10 @@
 {
-  "name": "parse-server-sendgrid-adapter",
+  "name": "parse-server-paubox-adapter",
   "version": "1.0.0",
-  "description": "Simple sendgrid adapter for parse server",
+  "description": "Simple paubox adapter for parse server",
   "main": "lib/index.js",
   "dependencies": {
-    "sendgrid": "^2.0.0"
+    "paubox-nodejs": "git+ssh://git@github.com/Withinapp/paubox-nodejs.git"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
@@ -16,16 +16,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oursky/parse-server-sendgrid-adapter.git"
+    "url": "git+https://github.com/withinapp/parse-server-paubox-adapter.git"
   },
   "keywords": [
     "parse-server",
-    "sendgrid"
+    "paubox"
   ],
-  "author": "Oursky",
+  "author": "Level Therpay",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/oursky/parse-server-sendgrid-adapter/issues"
+    "url": "https://github.com/withinapp/parse-server-paubox-adapter/issues"
   },
-  "homepage": "https://github.com/oursky/parse-server-sendgrid-adapter#readme"
+  "homepage": "https://github.com/withinapp/parse-server-paubox-adapter#readme"
 }

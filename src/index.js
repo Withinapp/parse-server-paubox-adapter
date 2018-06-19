@@ -1,21 +1,26 @@
-import SendGrid from 'sendgrid';
+import Paubox from 'paubox-nodejs';
 
-let SimpleSendGridAdapter = mailOptions => {
+let SimplePauboxAdapter = mailOptions => {
   if (!mailOptions || !mailOptions.apiKey || !mailOptions.fromAddress) {
-    throw 'SimpleSendGridAdapter requires an API Key.';
+    throw 'SimplePauboxAdapter requires an API Key.';
   }
-  let sendgrid = SendGrid(mailOptions.apiKey);
+  if (!mailOptions || !mailOptions.apiUsername || !mailOptions.fromAddress) {
+    throw 'SimplePauboxAdapter requires a username.';
+  }
 
-  let sendMail = ({to, subject, text}) => {
+  Paubox.setApiKey(mailOptions.apiKey);
+  Paubox.setApiUsername(mailOptions.username);
+
+  let sendMail = ({ to, subject, text }) => {
     return new Promise((resolve, reject) => {
-      sendgrid.send({
+      paubox.send({
         from: mailOptions.fromAddress,
         to: to,
         subject: subject,
         text: text,
-      }, function(err, json) {
+      }, function (err, json) {
         if (err) {
-           reject(err);
+          reject(err);
         }
         resolve(json);
       });
@@ -23,8 +28,8 @@ let SimpleSendGridAdapter = mailOptions => {
   }
 
   return Object.freeze({
-      sendMail: sendMail
+    sendMail: sendMail
   });
 }
 
-module.exports = SimpleSendGridAdapter
+module.exports = SimplePauboxAdapter
