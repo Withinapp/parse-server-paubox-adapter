@@ -13,7 +13,7 @@ let SimplePauboxAdapter = mailOptions => {
 
   let sendMail = ({ to, subject, text }) => {
     return new Promise((resolve, reject) => {
-      paubox.send({
+      Paubox.send({
         from: mailOptions.fromAddress,
         to: to,
         subject: subject,

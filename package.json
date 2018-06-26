@@ -1,6 +1,6 @@
 {
   "name": "parse-server-paubox-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple paubox adapter for parse server",
   "main": "lib/index.js",
   "dependencies": {
@@ -22,7 +22,7 @@
     "parse-server",
     "paubox"
   ],
-  "author": "Level Therpay",
+  "author": "Level Therapy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/withinapp/parse-server-paubox-adapter/issues"
