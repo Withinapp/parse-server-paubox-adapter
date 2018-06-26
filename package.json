@@ -1,6 +1,6 @@
 {
   "name": "parse-server-paubox-adapter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple paubox adapter for parse server",
   "main": "lib/index.js",
   "dependencies": {

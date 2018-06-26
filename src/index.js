@@ -9,7 +9,7 @@ let SimplePauboxAdapter = mailOptions => {
   }
 
   Paubox.setApiKey(mailOptions.apiKey);
-  Paubox.setApiUsername(mailOptions.username);
+  Paubox.setApiUsername(mailOptions.apiUsername);
 
   let sendMail = ({ to, subject, text }) => {
     return new Promise((resolve, reject) => {
