@@ -17,7 +17,7 @@ let SimplePauboxAdapter = mailOptions => {
         from: mailOptions.fromAddress,
         to: to,
         subject: subject,
-        text: text,
+        html: text,
       }, function (err, json) {
         if (err) {
           reject(err);
